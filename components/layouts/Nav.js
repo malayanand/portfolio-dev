@@ -1,19 +1,18 @@
 import { Box, Container, Heading, Stack, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
+import Logo from "./Logo";
 
 const LinkItem = ({ href, children, isExternal }) => {
   return (
     <NextLink href={href} passHref>
-      <Link color="blackAlpha.800" isExternal={isExternal}>
-        {children}
-      </Link>
+      <Link isExternal={isExternal}>{children}</Link>
     </NextLink>
   );
 };
 
 const Nav = () => {
   return (
-    <Box w="100%" as="nav" p={4}>
+    <Box w="100%" as="nav" p={2} css={{ backdropFilter: "blur(6px)" }}>
       <Container
         display="flex"
         justifyContent={"space-between"}
@@ -22,11 +21,13 @@ const Nav = () => {
         flexWrap={true}
         p={4}
       >
-        <Box align="center">
+        {/* <Box align="center">
           <Heading as="h1" size="lg" letterSpacing={3}>
             Malay Anand
           </Heading>
-        </Box>
+        </Box> */}
+
+        <Logo />
 
         <Stack
           direction={["column", "row"]}
