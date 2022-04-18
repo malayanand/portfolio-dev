@@ -1,11 +1,16 @@
 import Head from "next/head";
+import NextLink from "next/link";
 import {
   Container,
   Box,
   Heading,
   Image,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
+import Bio from "../components/Bio";
+import Section from "../components/section";
+import Paragraph from "../components/Paragraph";
 
 export default function Home() {
   return (
@@ -55,6 +60,40 @@ export default function Home() {
       >
         <p>I am a final year undergrad student</p>
       </Box>
+
+      <Box ml={{ md: 6 }} mt={4}>
+        <Box align="center">
+          <Image
+            src="/images/profileimage.jpg"
+            alt="Malay Anand"
+            objectFit="cover"
+            borderRadius="full"
+            borderColor="whiteAlpha.800"
+            borderWidth={2}
+            borderStyle="solid"
+            boxSize="120px"
+          />
+        </Box>
+      </Box>
+
+      <Section delay={0.1}>
+        <Heading mb={2} as="h1" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>
+          Malay is a Full Stack / Backend developer. He has experience working
+          as a backend developer with Django Framework and a knack for learning
+          new technologies and tech stacks. Previously he was working as an
+          intern at a startup called
+          <NextLink href="">
+            <Link color="#BC6FF1"> Ostabay</Link>
+          </NextLink>
+          . He enjoys dealing with and solving real-world problems. Apart from
+          backend development he also has an interest in frontend designing.
+        </Paragraph>
+      </Section>
+
+      <Bio />
     </Container>
   );
 }
