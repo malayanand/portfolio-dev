@@ -1,12 +1,14 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Box } from "@chakra-ui/react";
 import Nav from "./Nav";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <Box>
       <Nav />
-      <Container maxW="container.md">{children}</Container>
-    </>
+      <Container pt={16} maxW="container.md">
+        {children}
+      </Container>
+    </Box>
   );
 };
 

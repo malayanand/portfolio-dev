@@ -24,16 +24,24 @@ const LinkItem = ({ href, children, isExternal, ...props }) => {
   );
 };
 
-const Nav = () => {
+const Nav = (props) => {
   return (
-    <Box w="100%" as="nav" p={2} css={{ backdropFilter: "blur(6px)" }}>
+    <Box
+      position="fixed"
+      w="100%"
+      as="nav"
+      p={4}
+      css={{ backdropFilter: "blur(6px)" }}
+      zIndex={1}
+      {...props}
+    >
       <Container
         display="flex"
         justifyContent={"space-between"}
         align="center"
         maxW="container.lg"
         flexWrap={true}
-        p={4}
+        // p={4}
       >
         {/* <Box align="center">
           <Heading as="h1" size="lg" letterSpacing={3}>

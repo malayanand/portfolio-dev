@@ -7,10 +7,12 @@ import {
   Image,
   useColorModeValue,
   Link,
+  Button,
 } from "@chakra-ui/react";
 import Bio from "../components/Bio";
 import Section from "../components/section";
 import Paragraph from "../components/Paragraph";
+import GlowButton from "../components/glow-button";
 
 export default function Home() {
   return (
@@ -77,7 +79,7 @@ export default function Home() {
       </Box>
 
       <Section delay={0.1}>
-        <Heading mb={2} as="h1" variant="section-title">
+        <Heading mb={5} as="h1" variant="section-title">
           Work
         </Heading>
         <Paragraph>
@@ -91,6 +93,9 @@ export default function Home() {
           . He enjoys dealing with and solving real-world problems. Apart from
           backend development he also has an interest in frontend designing.
         </Paragraph>
+        <Box align="center" my={6}>
+          <GlowButton href="/works">My Portfolio</GlowButton>
+        </Box>
       </Section>
 
       <Bio />
