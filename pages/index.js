@@ -13,6 +13,7 @@ import Bio from "../components/Bio";
 import Section from "../components/section";
 import Paragraph from "../components/Paragraph";
 import GlowButton from "../components/glow-button";
+import Socials from "../components/Socials";
 
 export default function Home() {
   return (
@@ -25,34 +26,48 @@ export default function Home() {
       </Head>
 
       <Box
+        mt={16}
         display={{ md: "flex" }}
         flexDirection="row"
         justify-content="space-evenly"
         align="center"
+        mb={16}
       >
         <Box>
+          <Box
+            mt={16}
+            fontWeight="bold"
+            color="#4BE3AC
+"
+          >
+            <h5 fontSize={{ base: "1rem", md: "1.6rem" }} align="left">
+              Full Stack / Software Engineer
+            </h5>
+          </Box>
           <Heading
             fontSize={{ base: "1.5rem", md: "2rem", lg: "2.5rem" }}
             align="left"
             as="h2"
             variant="hero-title"
-            mt={10}
+            mt={5}
           >
-            Hi👋 there,<span> I am Malay Anand</span>
+            Hi👋 there
+            {/* ,<span> I am Malay Anand</span> */}
           </Heading>
-          <br />
-          <h5 fontSize={{ base: "1rem", md: "1.5rem" }} align="left">
-            Full Stack /
-          </h5>
-          <h5 fontSize={{ base: "1rem", md: "1.5rem" }} align="left">
-            Software Engineer
-          </h5>
+          <Heading
+            fontSize={{ base: "1.5rem", md: "2rem", lg: "2.5rem" }}
+            align="left"
+            as="h2"
+            variant="hero-title"
+          >
+            I'm <span>Malay</span>, a final year undergrad
+          </Heading>
         </Box>
         {/* <Box>
           <Image src={testimg} alt="Dan Abramov" />
         </Box> */}
       </Box>
-      <Box
+      {/* <Box
         width="100%"
         align="center"
         bgColor={useColorModeValue("#ffa4a436", "#ffffff14")}
@@ -61,9 +76,9 @@ export default function Home() {
         mt={6}
       >
         <p>I am a final year undergrad student</p>
-      </Box>
+      </Box> */}
 
-      <Box ml={{ md: 6 }} mt={4}>
+      {/* <Box ml={{ md: 6 }} mt={4}>
         <Box align="center">
           <Image
             src="/images/profileimage.jpg"
@@ -76,7 +91,7 @@ export default function Home() {
             boxSize="120px"
           />
         </Box>
-      </Box>
+      </Box> */}
 
       <Section delay={0.1}>
         <Heading mb={5} as="h1" variant="section-title">
@@ -88,7 +103,13 @@ export default function Home() {
           new technologies and tech stacks. Previously he was working as an
           intern at a startup called
           <NextLink href="">
-            <Link color="#BC6FF1"> Ostabay</Link>
+            <Link
+              color="#4BE3AC
+"
+            >
+              {" "}
+              Ostabay
+            </Link>
           </NextLink>
           . He enjoys dealing with and solving real-world problems. Apart from
           backend development he also has an interest in frontend designing.
@@ -99,6 +120,7 @@ export default function Home() {
       </Section>
 
       <Bio />
+      <Socials />
     </Container>
   );
 }
