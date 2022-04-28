@@ -1,14 +1,6 @@
 import Head from "next/head";
 import NextLink from "next/link";
-import {
-  Container,
-  Box,
-  Heading,
-  Image,
-  useColorModeValue,
-  Link,
-  Button,
-} from "@chakra-ui/react";
+import { Container, Box, Heading, Link } from "@chakra-ui/react";
 import Bio from "../components/Bio";
 import Section from "../components/section";
 import Paragraph from "../components/Paragraph";
@@ -26,7 +18,7 @@ export default function Home() {
       </Head>
 
       <Box
-        mt={16}
+        mt={20}
         display={{ md: "flex" }}
         flexDirection="row"
         justify-content="space-evenly"
@@ -34,12 +26,7 @@ export default function Home() {
         mb={16}
       >
         <Box>
-          <Box
-            mt={16}
-            fontWeight="bold"
-            color="#4BE3AC
-"
-          >
+          <Box mt={16} fontWeight="bold" color="#4BE3AC">
             <h5 fontSize={{ base: "1rem", md: "1.6rem" }} align="left">
               Full Stack / Software Engineer
             </h5>
