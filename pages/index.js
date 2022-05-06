@@ -101,8 +101,8 @@ export default function Home() {
           . He enjoys dealing with and solving real-world problems. Apart from
           backend development he also has an interest in frontend designing.
         </Paragraph>
-        <Box align="center" my={6}>
-          <GlowButton href="/works">My Portfolio</GlowButton>
+        <Box align="center" mt={2}>
+          <GlowButton href="/works">Portfolio</GlowButton>
         </Box>
       </Section>
 

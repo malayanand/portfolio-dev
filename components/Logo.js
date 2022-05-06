@@ -1,11 +1,14 @@
 import { Box, Heading } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Logo = () => {
   return (
-    <Box display="flex" flexDirection="row">
-      <Heading as="h1" size="md">
-        Malay Anand
-      </Heading>
+    <Box mt={2} display="flex" flexDirection="row" cursor={"pointer"}>
+      <NextLink href="/">
+        <Heading as="h1" size="md">
+          Malay Anand
+        </Heading>
+      </NextLink>
     </Box>
   );
 };

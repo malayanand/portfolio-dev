@@ -1,4 +1,4 @@
-import { Box, Heading, List, ListItem } from "@chakra-ui/react";
+import { Box, Heading, List, ListItem, Link } from "@chakra-ui/react";
 import Section from "./section";
 import NextLink from "next/link";
 import { DiGithubBadge } from "react-icons/di";
@@ -8,7 +8,7 @@ import { SiLeetcode } from "react-icons/si";
 
 const SocialButton = ({ children, href, icon, ...props }) => {
   return (
-    <NextLink href={href} passHref>
+    <Link href={href} target="_blank" style={{ textDecoration: "none" }}>
       <Box
         as="button"
         aria-label="social links"
@@ -31,9 +31,10 @@ const SocialButton = ({ children, href, icon, ...props }) => {
           bg: "#4be3ac26",
           textDecoration: "underline",
           textUnderlineOffset: "0.2em",
-          textDecorationColor: "#94FC13",
+          textDecorationColor: "#C1F8CF",
+          textDecorationThickness: "0.15em",
           transition:
-            "background-color 100ms linear, text-decoration 800ms linear",
+            "background-color 100ms linear, text-decoration 1000ms linear",
         }}
         {...props}
       >
@@ -42,7 +43,7 @@ const SocialButton = ({ children, href, icon, ...props }) => {
         </Box>
         {children}
       </Box>
-    </NextLink>
+    </Link>
   );
 };
 
@@ -66,7 +67,7 @@ const Socials = () => {
           <SocialButton
             align="center"
             icon={<SiLeetcode size={"1.2rem"} />}
-            href=""
+            href="https://leetcode.com/_malayanand/"
           >
             Leetcode
           </SocialButton>
@@ -75,7 +76,7 @@ const Socials = () => {
           <SocialButton
             align="center"
             icon={<GrInstagram size={"1rem"} />}
-            href=""
+            href="https://www.instagram.com/_malayanand/"
           >
             Instagram
           </SocialButton>
@@ -84,7 +85,7 @@ const Socials = () => {
           <SocialButton
             align="center"
             icon={<DiGithubBadge size={"1.4rem"} />}
-            href=""
+            href="https://github.com/malayanand"
           >
             GitHub
           </SocialButton>

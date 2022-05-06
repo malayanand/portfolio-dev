@@ -14,10 +14,17 @@ import { IoLogoGithub } from "react-icons/io5";
 import NextLink from "next/link";
 import Logo from "../Logo";
 
-const LinkItem = ({ href, children, isExternal, ...props }) => {
+const LinkItem = ({ href, path, children, isExternal, ...props }) => {
+  const active = path === href;
   return (
     <NextLink href={href} passHref>
-      <Link isExternal={isExternal} {...props}>
+      <Link
+        p={2}
+        bg={active ? "#C1F8CF" : undefined}
+        color={active ? "#1a1919" : "gray200"}
+        isExternal={isExternal}
+        {...props}
+      >
         {children}
       </Link>
     </NextLink>
@@ -25,12 +32,14 @@ const LinkItem = ({ href, children, isExternal, ...props }) => {
 };
 
 const Nav = (props) => {
+  const { path } = props;
+
   return (
     <Box
       position="fixed"
       w="100%"
       as="nav"
-      p={4}
+      p={2}
       css={{ backdropFilter: "blur(6px)" }}
       zIndex={1}
       {...props}
@@ -59,10 +68,10 @@ const Nav = (props) => {
           align="center"
           width={{ base: "full", md: "auto" }}
         >
-          <LinkItem href="/" isExternal={false}>
+          <LinkItem href="/" path={path} isExternal={false}>
             Home
           </LinkItem>
-          <LinkItem href="/Works" isExternal={false}>
+          <LinkItem href="/works" path={path} isExternal={false}>
             Works
           </LinkItem>
           <LinkItem
@@ -70,6 +79,7 @@ const Nav = (props) => {
             style={{ gap: 4 }}
             alignItems="center"
             href="https://github.com/malayanand"
+            path={path}
             isExternal={true}
           >
             <IoLogoGithub />
@@ -85,9 +95,15 @@ const Nav = (props) => {
               aria-label="Options"
             />
             <MenuList>
-              <MenuItem>Home</MenuItem>
-              <MenuItem>Works</MenuItem>
-              <MenuItem>Source</MenuItem>
+              <NextLink href="/" passHref>
+                <MenuItem>Home</MenuItem>
+              </NextLink>
+              <NextLink href="/works" passHref>
+                <MenuItem>Works</MenuItem>
+              </NextLink>
+              <NextLink href="https://github.com/malayanand" passHref>
+                <MenuItem>Source</MenuItem>
+              </NextLink>
             </MenuList>
           </Menu>
         </Box>

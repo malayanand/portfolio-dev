@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const GlowButton = ({ children, href, ...props }) => {
   return (
@@ -11,28 +12,28 @@ const GlowButton = ({ children, href, ...props }) => {
         marginTop="1em"
         marginBottom="1em"
         as="button"
-        color="#94FC13"
+        color="#C1F8CF"
         padding="0.25em 1em"
         display="inline-block"
         cursor="pointer"
         textDecoration="none"
-        border="#94FC13 0.125em solid"
+        border="#C1F8CF 0.125em solid"
         borderRadius="0.25em"
-        textShadow="0 0 1em #94FC13"
-        boxShadow="inset 0 0 0.5em 0 #94FC13, 0 0 0.5em 0 #94FC13"
+        textShadow="0 0 1em #C1F8CF"
+        boxShadow="inset 0 0 0.5em 0 #C1F8CF, 0 0 0.5em 0 #C1F8CF"
         position="relative"
         _before={{
           content: `""`,
           pointerEvents: "none",
           position: "absolute",
-          background: "#94FC13",
+          // background: "#94FC13",
           top: "120%",
           left: "0",
           width: "100%",
           height: "100%",
           transform: "perspective(2em) rotateX(40deg) scale(1, 0.35)",
           filter: "blur(1.5em)",
-          opacity: "0.7",
+          opacity: "0.5",
         }}
         _after={{
           content: `""`,
@@ -41,10 +42,10 @@ const GlowButton = ({ children, href, ...props }) => {
           left: "0",
           right: "0",
           bottom: "0",
-          boxShadow: "0 0 1em 0.4em #94FC13",
+          boxShadow: "0 0 1em 0.4em #C1F8CF",
           opacity: "0",
           transition: "opacity 100ms linear",
-          background: "#94FC13",
+          background: "#C1F8CF",
           zIndex: "-1",
         }}
         _hover={{
@@ -59,12 +60,14 @@ const GlowButton = ({ children, href, ...props }) => {
           },
         }}
         _focus={{
-          background: "#94FC13",
+          background: "#C1F8CF",
           color: "whiteAlpha.700",
           textShadow: "none",
         }}
+        {...props}
       >
         {children}
+        <ChevronRightIcon mb={1} pl={1} />
       </Box>
     </NextLink>
   );
