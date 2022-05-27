@@ -40,7 +40,7 @@ const Nav = (props) => {
       w="100%"
       as="nav"
       p={2}
-      css={{ backdropFilter: "blur(6px)" }}
+      css={{ backdropFilter: "blur(3px)" }}
       zIndex={1}
       {...props}
     >

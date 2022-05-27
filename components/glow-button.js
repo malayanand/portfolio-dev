@@ -26,7 +26,7 @@ const GlowButton = ({ children, href, ...props }) => {
           content: `""`,
           pointerEvents: "none",
           position: "absolute",
-          // background: "#94FC13",
+          background: "#C1F8CF",
           top: "120%",
           left: "0",
           width: "100%",

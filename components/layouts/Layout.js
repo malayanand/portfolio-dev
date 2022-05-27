@@ -3,6 +3,9 @@ import Nav from "./Nav";
 import Footer from "../Footer";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import VoxelFace from "../voxel-face";
+// import VoxelFace from "../components/voxel-face";
+import NoSsr from "../no-ssr";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -18,10 +21,15 @@ const Layout = ({ children }) => {
         <meta name="og:title" content="Malay Anand" />
         <meta property="og:type" content="website" />
       </Head>
+
       <Nav path={router.asPath} />
       <Container pt={16} maxW="container.md">
+        {/* <NoSsr>
+          <VoxelFace />
+        </NoSsr> */}
         {children}
       </Container>
+
       <Footer />
     </Box>
   );
