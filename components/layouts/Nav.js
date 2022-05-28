@@ -13,6 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { IoLogoGithub } from "react-icons/io5";
 import NextLink from "next/link";
 import Logo from "../Logo";
+import ThemeToggle from "../Theme-toggle-button";
 
 const LinkItem = ({ href, path, children, isExternal, ...props }) => {
   const active = path === href;
@@ -64,9 +65,10 @@ const Nav = (props) => {
           direction={["column", "row"]}
           display={{ base: "none", md: "flex" }}
           // justify="space-between"
-          spacing={6}
+          spacing={4}
           align="center"
           width={{ base: "full", md: "auto" }}
+          mr={{ md: "-14rem", lg: "-22rem" }}
         >
           <LinkItem href="/" path={path} isExternal={false}>
             Home
@@ -78,7 +80,7 @@ const Nav = (props) => {
             display="inline-flex"
             style={{ gap: 4 }}
             alignItems="center"
-            href="https://github.com/malayanand"
+            href="https://github.com/malayanand/portfolio-dev"
             path={path}
             isExternal={true}
           >
@@ -86,7 +88,11 @@ const Nav = (props) => {
             Source
           </LinkItem>
         </Stack>
-        <Box display={{ base: "inline-block", md: "none" }}>
+        <ThemeToggle />
+        <Box
+          display={{ base: "inline-block", md: "none" }}
+          ml={{ base: "-12rem" }}
+        >
           <Menu isLazy p={2}>
             <MenuButton
               as={IconButton}
