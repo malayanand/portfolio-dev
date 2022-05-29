@@ -11,7 +11,7 @@ const Logo = () => {
       cursor={"pointer"}
       mr={12}
     >
-      <NextLink href="/">
+      <NextLink href="/" passHref>
         <Heading as="h1" size="md">
           Malay Anand
         </Heading>

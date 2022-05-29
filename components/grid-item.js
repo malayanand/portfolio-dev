@@ -25,7 +25,7 @@ export const WorkGridItem = ({ children, href, title, date, stack }) => (
       borderRadius={10}
       mb={4}
     >
-      <NextLink href={href} scroll={false}>
+      <NextLink href={href} scroll={false} passHref>
         <LinkBox cursor={"pointer"}>
           <LinkOverlay href={href} target="_blank">
             <Heading size={"sm"} mt={2}>

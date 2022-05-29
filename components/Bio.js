@@ -31,7 +31,7 @@ const Bio = () => {
             2022
           </Text>
           <Text>
-            Bachelor's of Engineering, Computer Science @VTU Bangalore
+            Bachelor&apos;s of Engineering, Computer Science @VTU Bangalore
           </Text>
         </Box>
         <Box p={1} display="flex" flexDirection="row">

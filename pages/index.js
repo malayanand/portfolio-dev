@@ -53,7 +53,7 @@ export default function Home() {
             as="h2"
             variant="hero-title"
           >
-            I'm Malay, a final year undergrad
+            I&apos;m Malay, a final year undergrad
           </Heading>
         </Box>
         <Typewriter />
