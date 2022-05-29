@@ -92,17 +92,17 @@ export default function Home() {
             backend development he also has an interest in frontend designing.
           </Paragraph>
           <Box align="center" mt={2}>
-            <Button
-              align="center"
-              variant={"solid"}
-              colorScheme={"teal"}
-              mt={4}
-              href="/works"
-            >
-              Portfolio
-              <ChevronRightIcon pl={1} />
-            </Button>
-            {/* <GlowButton href="/works">Portfolio</GlowButton> */}
+            <NextLink href="/works" passHref>
+              <Button
+                align="center"
+                variant={"solid"}
+                colorScheme={"teal"}
+                mt={4}
+              >
+                Portfolio
+                <ChevronRightIcon pl={1} />
+              </Button>
+            </NextLink>
           </Box>
         </Section>
 
