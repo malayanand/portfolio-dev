@@ -23,7 +23,7 @@ const Works = () => {
           href="https://github.com/malayanand/BlogApp_BLOGGERs"
           title="Blog App"
           date="January 2022"
-          stack={["Django", "Django REST Framework", "ReactJS"]}
+          stack="Django | Django REST Framework | ReactJS"
         >
           A simple blogging application with all the CRUD functionalities.
         </WorkGridItem>

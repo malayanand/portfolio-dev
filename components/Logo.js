@@ -3,7 +3,14 @@ import NextLink from "next/link";
 
 const Logo = () => {
   return (
-    <Box mt={2} display="flex" flexDirection="row" cursor={"pointer"}>
+    <Box
+      aria-label="Logo"
+      mt={2}
+      display="flex"
+      flexDirection="row"
+      cursor={"pointer"}
+      mr={12}
+    >
       <NextLink href="/">
         <Heading as="h1" size="md">
           Malay Anand

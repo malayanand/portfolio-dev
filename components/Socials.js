@@ -1,4 +1,11 @@
-import { Box, Heading, List, ListItem, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  List,
+  ListItem,
+  Link,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Section from "./section";
 import NextLink from "next/link";
 import { DiGithubBadge } from "react-icons/di";
@@ -8,7 +15,7 @@ import { SiLeetcode } from "react-icons/si";
 
 const SocialButton = ({ children, href, icon, ...props }) => {
   return (
-    <Link href={href} target="_blank" style={{ textDecoration: "none" }}>
+    <Link as="a" href={href} target="_blank" style={{ textDecoration: "none" }}>
       <Box
         as="button"
         aria-label="social links"
@@ -20,7 +27,7 @@ const SocialButton = ({ children, href, icon, ...props }) => {
         width={"10rem"}
         alignContent={"left"}
         textAlign={"center"}
-        color="#4BE3AC"
+        color={useColorModeValue("#319795", "#4BE3AC")}
         borderRadius={8}
         fontWeight={"bold"}
         pt={2}
@@ -28,13 +35,12 @@ const SocialButton = ({ children, href, icon, ...props }) => {
         pb={2}
         // p={4}
         _hover={{
-          bg: "#4be3ac26",
+          bg: useColorModeValue("#f47e7e33", "#4be3ac26"),
           textDecoration: "underline",
           textUnderlineOffset: "0.2em",
-          textDecorationColor: "#C1F8CF",
+          textDecorationColor: useColorModeValue("#F47C7C", "teal"),
           textDecorationThickness: "0.15em",
-          transition:
-            "background-color 100ms linear, text-decoration 1000ms linear",
+          transition: "background-color 100ms linear",
         }}
         {...props}
       >

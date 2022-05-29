@@ -4,11 +4,9 @@ import {
   LinkOverlay,
   Text,
   Heading,
-  Badge,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-// import Paragraph from "./Paragraph";
-import Tags from "../components/tags";
 
 export const WorkGridItem = ({ children, href, title, date, stack }) => (
   <Box
@@ -16,12 +14,13 @@ export const WorkGridItem = ({ children, href, title, date, stack }) => (
     flexDir="column"
     justifyContent={"space-between"}
     alignItems={"center"}
+    aria-label="card"
     // h={80}
   >
     <Box
       w="100%"
       h="100%"
-      background={"#121212"}
+      background={useColorModeValue("#FAD4D4", "#121212")}
       p={6}
       borderRadius={10}
       mb={4}
@@ -42,10 +41,6 @@ export const WorkGridItem = ({ children, href, title, date, stack }) => (
           <Box mt={12} display={"flex"} flexDir={"row"}>
             <Text fontSize={15}>{stack}</Text>
           </Box>
-          {/* {stack.map((tag) => (
-            <Badge colorScheme={"teal"}>{tag}</Badge>
-          ))} */}
-          {/* <Tags>Django</Tags> */}
         </LinkBox>
       </NextLink>
     </Box>

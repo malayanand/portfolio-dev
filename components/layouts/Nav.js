@@ -8,6 +8,7 @@ import {
   IconButton,
   MenuList,
   MenuItem,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IoLogoGithub } from "react-icons/io5";
@@ -21,8 +22,9 @@ const LinkItem = ({ href, path, children, isExternal, ...props }) => {
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? "#C1F8CF" : undefined}
-        color={active ? "#1a1919" : "gray200"}
+        // bg={active ? "#C1F8CF" : undefined}
+        color={active ? "#7c7c7c" : "whiteAlpha"}
+        fontWeight={"bold"}
         isExternal={isExternal}
         {...props}
       >
@@ -41,6 +43,7 @@ const Nav = (props) => {
       w="100%"
       as="nav"
       p={2}
+      bg={useColorModeValue("#ffffff80", "#20202380")}
       css={{ backdropFilter: "blur(3px)" }}
       zIndex={1}
       {...props}
@@ -53,25 +56,19 @@ const Nav = (props) => {
         flexWrap={true}
         // p={4}
       >
-        {/* <Box align="center">
-          <Heading as="h1" size="lg" letterSpacing={3}>
-            Malay Anand
-          </Heading>
-        </Box> */}
-
         <Logo />
 
         <Stack
           direction={["column", "row"]}
           display={{ base: "none", md: "flex" }}
           // justify="space-between"
-          spacing={4}
+          spacing={2}
           align="center"
           width={{ base: "full", md: "auto" }}
-          mr={{ md: "-14rem", lg: "-22rem" }}
+          flexGrow={1}
         >
           <LinkItem href="/" path={path} isExternal={false}>
-            Home
+            About
           </LinkItem>
           <LinkItem href="/works" path={path} isExternal={false}>
             Works
@@ -88,30 +85,34 @@ const Nav = (props) => {
             Source
           </LinkItem>
         </Stack>
-        <ThemeToggle />
+
         <Box
-          display={{ base: "inline-block", md: "none" }}
-          ml={{ base: "-12rem" }}
+          flex={1}
+          align="right"
+          // ml={{ base: "-12rem" }}
         >
-          <Menu isLazy p={2}>
-            <MenuButton
-              as={IconButton}
-              icon={<HamburgerIcon />}
-              variant="outline"
-              aria-label="Options"
-            />
-            <MenuList>
-              <NextLink href="/" passHref>
-                <MenuItem>Home</MenuItem>
-              </NextLink>
-              <NextLink href="/works" passHref>
-                <MenuItem>Works</MenuItem>
-              </NextLink>
-              <NextLink href="https://github.com/malayanand" passHref>
-                <MenuItem>Source</MenuItem>
-              </NextLink>
-            </MenuList>
-          </Menu>
+          <ThemeToggle />
+          <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+            <Menu isLazy p={2}>
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem>Home</MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem>Works</MenuItem>
+                </NextLink>
+                <NextLink href="https://github.com/malayanand" passHref>
+                  <MenuItem>Source</MenuItem>
+                </NextLink>
+              </MenuList>
+            </Menu>
+          </Box>
         </Box>
       </Container>
     </Box>
