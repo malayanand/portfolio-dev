@@ -45,15 +45,15 @@ export default function Home() {
             variant="hero-title"
             mt={5}
           >
-            Hi👋 there
+            Hi I&apos;m
           </Heading>
           <Heading
-            fontSize={{ base: "1.5rem", md: "2rem", lg: "2.5rem" }}
+            fontSize={{ base: "2rem", md: "3rem", lg: "4rem" }}
             align="left"
             as="h2"
             variant="hero-title"
           >
-            I&apos;m Malay, a final year undergrad
+            Malay Anand
           </Heading>
         </Box>
         <Typewriter />
