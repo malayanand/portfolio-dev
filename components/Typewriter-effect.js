@@ -6,8 +6,8 @@ const Typewriter = (props) => {
     <Box
       className="typewriter"
       textAlign={"left"}
-      color={"#4F4D4D"}
-      fontSize={{ base: "0.9rem", md: "1rem" }}
+      color={useColorModeValue("#4BE3AC","#f47c7c")}
+      fontSize={{ base: "1rem", md: "1.4rem" }}
     >
       <TypeIt
         // speed="10"
@@ -18,7 +18,7 @@ const Typewriter = (props) => {
         }}
         getBeforeInit={(instance) => {
           instance
-            .type("Currently a software developer @ Daimler Truck Innovation Center India")
+            .type("Currently Software Developer @ Daimler Truck Innovation Center India")
             .pause(750)
 
           // Remember to return it!
