@@ -6,7 +6,7 @@ const Typewriter = (props) => {
     <Box
       className="typewriter"
       textAlign={"left"}
-      color={useColorModeValue("#4BE3AC","#f47c7c")}
+      color={useColorModeValue("#f47c7c","#4BE3AC")}
       fontSize={{ base: "1rem", md: "1.4rem" }}
     >
       <TypeIt
